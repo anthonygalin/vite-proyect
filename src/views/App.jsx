@@ -92,7 +92,7 @@ function App() {
                 <div className='fresa8x2-container'>
                     <img className='fresa8x2' src={fresa8x2} alt=""/>
                 </div>
-                <div className='arrow-right'></div>
+                <div className='arrow-right-up'></div>
                 {/**/}
             </section>
             <section className='information-container'>
