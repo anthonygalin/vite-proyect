@@ -33,10 +33,24 @@ button {
 .pt-50 {
   padding-top: 50px;
 }
-.arrow-right {
-  height: 300px;
-  border-top: 50px solid transparent;
-  border-left: 375px solid white;
+.arrow-right-up {
+  position: absolute;
+  bottom: -10%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 10%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.arrow-right-up:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: 0;
+  border-rigth: 2500px solid transparent;
+  border-bottom: 200px solid white;
 }
 
 //Clases para el HTML
@@ -448,11 +462,6 @@ button {
   }
 }
 @media (min-height: 840px) {
-  .arrow-right {
-    height: 300px;
-    border-top: 50px solid transparent;
-    border-left: 390px solid white;
-  }
   .product-img {
     width: 180px;
   }
@@ -518,11 +527,6 @@ button {
   }
 }
 @media (min-width: 600px) {
-  .arrow-right {
-    height: 300px;
-    border-top: 50px solid transparent;
-    border-left: 600px solid white;
-  }
   .product-img {
     width: 180px;
   }
@@ -600,12 +604,6 @@ button {
 
 }
 @media (min-width: 800px) {
-  .arrow-right {
-    margin-top: 104px;
-    height: 300px;
-    border-top: 150px solid transparent;
-    border-left: 800px solid white;
-  }
   .mobile-nav-bar {
     display: none;
   }
@@ -805,10 +803,6 @@ button {
   }
 }
 @media (min-width: 850px) {
-  .arrow-right {
-    border-top: 150px solid transparent;
-    border-left: 850px solid white;
-  }
   .product-info-nutrition-table-container {
     padding-left: 20px;
   }
@@ -816,9 +810,6 @@ button {
 @media (min-height: 900px) {
   .arrow-container-up {
     bottom: -160%;
-  }
-  .arrow-right {
-    border-left: 412px solid white;
   }
 }
 @media (min-width: 1200px) {
@@ -885,10 +876,6 @@ button {
   }
 }
 @media  (min-width: 1400px) {
-  .arrow-right {
-    border-top: 150px solid transparent;
-    border-left: 1400px solid white;
-  }
   .product-img {
     margin-left: 200px;
   }
@@ -909,10 +896,6 @@ button {
   }
 }
 @media (min-width: 1600px) {
-  .arrow-right {
-    border-top: 150px solid transparent;
-    border-left: 1600px solid white;
-  }
   .product-img {
     margin-left: 300px;
   }
@@ -924,10 +907,6 @@ button {
   }
 }
 @media (min-width: 1920px) {
-  .arrow-right {
-    border-top: 150px solid transparent;
-    border-left: 1920px solid white;
-  }
   .arrow-container-up {
     bottom: -140%;
   }
