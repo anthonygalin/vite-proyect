@@ -1,0 +1,941 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: var(--font-open-sans);
+}
+
+//Utiles
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+.pt-50 {
+  padding-top: 50px;
+}
+.arrow-right {
+  height: 300px;
+  border-top: 50px solid transparent;
+  border-left: 375px solid white;
+}
+
+//Clases para el HTML
+.main-container {
+  background: var(--bg-vitalinea);
+  height: 100vh;
+}
+.text-align-center {
+  text-align: center;
+}
+//fresas
+.fresa2-container {
+  display: none;
+}
+.fresa3-container {
+  display: none;
+}
+.fresa4-container {
+  display: none;
+}
+.fresa5-container {
+  display: none;
+}
+.fresa5x2-container {
+  position: absolute;
+  top: 11%;
+  right: 75%;
+  z-index: 1;
+}
+.fresa5x2 {
+  width: 200px;
+  transform: rotate(-20deg);
+}
+.fresa6-container {
+  position: absolute;
+  right: 0;
+  top: 130%;
+}
+.fresa6 {
+  width: 80px;
+}
+.fresa7-container {
+  position: absolute;
+  top: 170%;
+  left: -10%;
+}
+.fresa7 {
+  width: 80px;
+}
+.fresa8-container {
+  position: absolute;
+  top: -2%;
+  left: 68%;
+  z-index: 1;
+}
+.fresa8 {
+  width: 100px;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.fresa8x2-container {
+  display: none;
+}
+.fresa9-container {
+  display: none;
+}
+//Header
+
+.header-container {
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(to bottom, var(--white), var(--white-67));
+  min-height: 80px;
+  z-index: 10000;
+}
+
+.container-logo-vitaline {
+  padding: 18px 0 12px 20px;
+  float: left;
+}
+
+.container-logo-vitaline img {
+  width: 110px;
+}
+
+#mobile-nav-bar-content {
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(to bottom, var(--white), var(--white-67));
+  width: 100%;
+  height: 100vh;
+  margin-top: 12px;
+}
+
+.mobile-nav-bar {
+  padding: 32px 32px 25px 0;
+  float: right;
+  display: block;
+}
+.navBar {
+  float: right;
+  display: none;
+}
+
+.nav-bar-icon {
+  font-size: 25px;
+  text-align: center;
+  color: #b98b3c;
+}
+.mobile-nav-bar-icon {
+  font-size: 30px;
+  padding-right: 15px;
+}
+
+.nav-bar-title-container {
+  display: flex;
+  flex-flow: wrap column;
+  align-content: center;
+  padding: 50px 20px;
+}
+.mobile-social-media-logo-container {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 100px;
+}
+.social-media-icon {
+  width: 50px;
+}
+.nav-title-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.social-media-logo-container {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 10px;
+}
+.social-media {
+  cursor: pointer;
+}
+.social-media:hover {
+  transition: all .5s ease-in-out;
+  transform: scale(1.2)
+}
+.nav-title {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.nav-title:hover {
+  transition: all .5s ease-in-out;
+  transform: scale(1.2)
+}
+.nav-bar-title {
+  font-size: 20px;
+  color: purple;
+  font-weight: 600;
+  padding: 20px 0 6px 0;
+}
+// product
+.product-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 14px;
+}
+.product-data-container {
+  display: grid;
+  place-items: center;
+}
+.product-img {
+  width: 100px;
+}
+//product tags
+.tags-container {
+  padding: 0 4px;
+  display: flex;
+  flex-flow: wrap row;
+}
+.inactive-tag {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 11.5px;
+  margin: 4px;
+}
+.inactive-tag:hover {
+  transition: all .5s ease-in-out;
+  transform: scale(1.2)
+}
+.active-tag {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 11.5px;
+  margin: 4px;
+}
+.active-tag:hover {
+  transition: all .5s ease-in-out;
+  transform: scale(1.2)
+}
+.tag-title {
+  padding-top: 2px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.tag-text {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 12px 0 12px;
+  text-align: center;
+}
+.product-title {
+  font-size: 20px;
+  font-weight: 300;
+  color: #78246d;
+  margin: 8px 0;
+}
+.product-description {
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
+  padding: 0 12px 8px;
+  max-width: 300px;
+}
+.product-button-container {
+  padding: 8px 0 0;
+}
+.product-button {
+  width: 300px;
+  height: 33px;
+  color: white;
+  background-color: #78246d;
+}
+.logo-container {
+  padding: 15px 0;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  gap: 30px;
+}
+.brand-logo {
+  width: 50px;
+}
+.brand-logo.logo2 {
+  width: 68px;
+}
+.arrow-container {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  padding: 4px;
+}
+.arrow-container-up {
+  cursor: pointer;
+  position: absolute;
+  bottom: -260%;
+  left: 40%;
+  padding: 4px;
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+.information-container {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  margin: 60px 10px;
+}
+.product-info-title {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2.41px;
+  color: #6f2e6d;
+}
+.product-info-description-container {
+  padding-top: 30px;
+  max-width: 300px;
+}
+.product-info-description {
+  font-size: 14px;
+  font-weight: 600;
+}
+.product-info-ingredients-container {
+  padding-top: 30px;
+}
+.product-info-ingredients-tittle {
+  font-size: 14px;
+  font-weight: 600;
+}
+.product-info-ingredients {
+  font-size: 14px;
+}
+.product-info-nutrition-table-container {
+  margin-top: 50px;
+  background-color: #fafafa;
+  padding: 20px 6px 10px;
+}
+.nutrition-content-container {
+  display: flex;
+  justify-content: end;
+  flex-flow: wrap row;
+  padding-bottom: 10px;
+}
+.nutrition-content-container h6 {
+  padding-right: 15px;
+}
+.nutrition-content-container p {
+  min-width: 57px;
+  text-align: start;
+}
+.nutrition-text {
+  font-size: 12px;
+  font-weight: 300;
+  color: #78246d;
+}
+.product-info-container {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+.other-products-container {
+  background: url('/src/assets/background/bg-familia-vitalinea.png');
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1,1fr);
+}
+.carrousell-page-title {
+  padding-top: 50px;
+  font-size: 22px;
+  color: #78246d;
+  font-weight: 300;
+  text-align: center;
+}
+.carrousell-products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 200px;
+  max-width: 300px;
+  overflow: auto;
+  padding-bottom: 100px;
+}
+.carrousell-product-content {
+  display: grid;
+  place-items: center;
+}
+.product-vitalinea-img {
+  max-width: 150px;
+  max-height: 150px;
+}
+.product-vitalinea-title {
+  font-size: 13px;
+  font-weight: 300;
+  color: #78246d;
+  text-align: center;
+}
+.footer {
+  padding: 30px 10px;
+}
+.footer-logo-container {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  padding: 0 10px 20px;
+}
+.footer-logo.logo1 {
+  max-width: 50px;
+}
+.footer-logo.logo2 {
+  max-width: 80px;
+  max-height: 35px;
+}
+.product-services {
+  font-size: 11px;
+  text-align: center;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.arrow-button {
+  cursor: pointer;
+  background-color: #78246d;
+  padding: 8px 10px;
+  border-radius: 100%;
+}
+.arrow-button-up {
+  cursor: pointer;
+  background-color: #78246d;
+  padding: 8px 15px;
+  border-radius: 100%;
+  color: white;
+  font-size: 24px;
+}
+//Breackpoints
+@media (min-height: 600px) {
+  .arrow-container-up {
+    bottom: -220%;
+  }
+}
+@media (min-height: 840px) {
+  .arrow-right {
+    height: 300px;
+    border-top: 50px solid transparent;
+    border-left: 390px solid white;
+  }
+  .product-img {
+    width: 180px;
+  }
+  .tag-title {
+    font-size: 17px;
+  }
+  .tag-text {
+    font-size: 17px;
+  }
+  .product-title {
+    font-size: 24px;
+  }
+  .product-description {
+    font-size: 16px;
+    max-width: 360px;
+  }
+  .product-button {
+    cursor: pointer;
+    width: 350px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .product-button:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.2)
+  }
+  .arrow-container-up {
+    bottom: -175%;
+  }
+  .brand-logo {
+    width: 60px;
+  }
+  .nav-bar-title {
+    font-size: 30px;
+  }
+  .brand-logo.logo2 {
+    width: 80px;
+  }
+  .fresa6-container {
+    top: 120%;
+  }
+  .fresa7-container {
+    top: 150%;
+    left: -5%;
+  }
+  .fresa7 {
+    width: 80px;
+  }
+  .fresa8-container {
+    position: absolute;
+    top: -2%;
+    left: 72%;
+    z-index: 1;
+  }
+  .nutrition-text {
+    font-size: 15px;
+  }
+  .carrousell-products-container {
+    padding-top: 180px;
+  }
+  .product-services {
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) {
+  .arrow-right {
+    height: 300px;
+    border-top: 50px solid transparent;
+    border-left: 600px solid white;
+  }
+  .product-img {
+    width: 180px;
+  }
+  .arrow-container-up {
+    bottom: -175%;
+  }
+  .nav-bar-title {
+    font-size: 35px;
+  }
+  .tag-title {
+    font-size: 18px;
+  }
+  .tag-text {
+    font-size: 18px;
+  }
+  .product-title {
+    font-size: 28px;
+  }
+  .product-description {
+    font-size: 16px;
+    max-width: 430px;
+  }
+  .product-button {
+    width: 400px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .brand-logo {
+    width: 65px;
+  }
+  .brand-logo.logo2 {
+    width: 85px;
+  }
+  .arrow-container {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    padding: 4px;
+  }
+  .fresa5x2-container {
+    top: 8%;
+    right: 85%;
+  }
+  .fresa6-container {
+    top: 120%;
+  }
+  .fresa7 {
+    width: 110px;
+  }
+  .fresa7-container {
+    top: 150%;
+  }
+  .fresa8-container {
+    position: absolute;
+    top: -2%;
+    left: 83%;
+    z-index: 1;
+  }
+  .product-info-title {
+    font-size: 25px;
+  }
+  .nutrition-text {
+    font-size: 18px;
+  }
+  .nutrition-content-container p {
+    min-width: 100px;
+  }
+  .carrousell-products-container {
+    padding-top: 160px;
+    max-width: 500px;
+  }
+  .product-services {
+    font-size: 14px;
+  }
+
+}
+@media (min-width: 800px) {
+  .arrow-right {
+    margin-top: 104px;
+    height: 300px;
+    border-top: 150px solid transparent;
+    border-left: 800px solid white;
+  }
+  .mobile-nav-bar {
+    display: none;
+  }
+  .arrow-container-up {
+    left: 50%;
+    bottom: -155%;
+  }
+  .navBar {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    padding-top: 20px;
+  }
+  .product-title {
+    font-size: 30px;
+  }
+  .product-description {
+    font-size: 16px;
+    max-width: 450px;
+  }
+  .tag-title {
+    font-size: 15px;
+  }
+  .tag-text {
+    font-size: 15px;
+  }
+  .inactive-tag {
+    margin: 4px 12px;
+  }
+  .active-tag {
+    margin: 4px 12px;
+    padding: 0 8px;
+  }
+  .product-container {
+    width: 100%;
+    grid-template-columns: 200px 1fr;
+    padding-top: 14px;
+  }
+  .product-img {
+    margin-left: 70px;
+    width: 230px;
+  }
+  .product-data-container {
+    margin-top: 25px;
+    display: grid;
+    place-items: center;
+  }
+  .product-button-container {
+    place-self: start;
+    padding-left: 12px;
+  }
+  .product-button {
+    width: 243px;
+    height: 40px;
+    font-size: 19px;
+  }
+  .logo-container {
+    place-self: start;
+    padding: 30px 12px;
+  }
+  .fresa2-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 25%;
+  }
+  .fresa2 {
+    width: 300px;
+  }
+  .fresa3-container {
+    display: block;
+    position: absolute;
+    right: 10%;
+  }
+  .fresa3 {
+    width: 150px;
+  }
+  .fresa4-container {
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+  .fresa4 {
+    width: 120px;
+  }
+  .fresa5-container {
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: -18%;
+  }
+  .fresa5x2-container {
+    position: absolute;
+    top: -7%;
+    right: 65%;
+    z-index: 1;
+  }
+  .fresa5x2 {
+    width: 200px;
+    transform: rotate(-50deg);
+  }
+  .fresa6-container {
+    top: 115%;
+  }
+  .fresa7 {
+    width: 150px;
+  }
+  .fresa7-container {
+    top: 158%;
+  }
+  .fresa8-container {
+    display: none;
+  }
+  .fresa8x2-container {
+    display: block;
+    position: absolute;
+    top: 170%;
+    right: 0;
+  }
+  .fresa8x2 {
+    width: 150px;
+  }
+  .fresa9-container {
+    display: block;
+    position: absolute;
+    top: 165%;
+    left: 15%;
+  }
+  .fresa9 {
+    width: 150px;
+  }
+  .container-logo-vitaline {
+    cursor: pointer;
+    padding: 18px 0 12px 50px;
+    float: left;
+  }
+
+  .container-logo-vitaline img {
+    width: 120px;
+  }
+  .product-info-title {
+    font-size: 32px;
+    padding-left: 65px;
+  }
+  .product-info-description {
+    font-weight: bold;
+  }
+  .product-info-ingredients-tittle {
+    font-weight: bold;
+  }
+  .product-info-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .product-info-description-container {
+    max-width: 260px;
+    margin: auto;
+  }
+  .product-info-ingredients-container {
+    max-width: 260px;
+    margin: auto;
+  }
+  .product-info-nutrition-table-container {
+    margin-top: 30px;
+    padding-left: 10px;
+  }
+  .nutrition-text {
+    font-size: 15px;
+  }
+  .carrousell-products-container {
+    max-width: 700px;
+  }
+  .product-vitalinea-img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .carrousell-product-content.pt-50 {
+    padding-top: 90px;
+  }
+  .carrousell-page-title {
+    font-size: 44px;
+  }
+  .footer-logo-container {
+    display: block;
+  }
+  .footer-logo.logo1 {
+    float: left;
+  }
+  .footer-logo.logo2 {
+    float: right;
+  }
+  .product-services {
+    padding-left: 80px;
+    text-align: start;
+  }
+  .footer-logo-container {
+    padding: 0;
+  }
+}
+@media (min-width: 850px) {
+  .arrow-right {
+    border-top: 150px solid transparent;
+    border-left: 850px solid white;
+  }
+  .product-info-nutrition-table-container {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .product-container {
+    width: 100%;
+    margin: auto;
+    padding: 50px 100px 0 100px;
+  }
+  .product-img {
+    width: 260px;
+  }
+  .tag-title {
+    font-size: 18px;
+  }
+  .tag-text {
+    font-size: 16px;
+  }
+  .product-title {
+    font-size: 35px;
+  }
+  .product-description {
+    font-size: 20px;
+    max-width: 520px;
+  }
+  .fresa3 {
+    width: 180px;
+  }
+  .fresa5-container {
+    top: 115%;
+    left: 0;
+  }
+  .fresa5 {
+    width: 180px;
+  }
+  .fresa6 {
+    width: 150px;
+  }
+  .fresa7-container {
+    left: 0;
+  }
+  .fresa8x2-container {
+    top: 160%;
+    right: 0;
+  }
+  .fresa9-container {
+    left: 20%;
+  }
+  .fresa9 {
+    width: 160px;
+  }
+  .carrousell-products-container {
+    max-width: 1000px;
+  }
+  .product-vitalinea-img {
+    max-width: 356px;
+    max-height: 267px;
+  }
+  .product-vitalinea-title {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+  .carrousell-product-content.pt-50 {
+    padding-top: 60px;
+  }
+}
+@media  (min-width: 1400px) {
+  .arrow-right {
+    border-top: 150px solid transparent;
+    border-left: 1400px solid white;
+  }
+  .product-img {
+    margin-left: 200px;
+  }
+  .fresa5-container {
+    left: 5%;
+  }
+  .fresa5 {
+    width: 200px;
+  }
+  .fresa8x2 {
+    width: 180px;
+  }
+  .fresa9-container {
+    left: 20%;
+  }
+  .fresa9 {
+    width: 170px;
+  }
+}
+@media (min-width: 1600px) {
+  .arrow-right {
+    border-top: 150px solid transparent;
+    border-left: 1600px solid white;
+  }
+  .product-img {
+    margin-left: 300px;
+  }
+  .fresa5-container {
+    left: 10%;
+  }
+  .fresa9 {
+    width: 180px;
+  }
+}
+@media (min-width: 1920px) {
+  .arrow-right {
+    border-top: 150px solid transparent;
+    border-left: 1920px solid white;
+  }
+  .arrow-container-up {
+    bottom: -140%;
+  }
+  .product-img {
+    margin-left: 700px;
+  }
+  .fresa8x2-container {
+    top: 150%;
+  }
+  .fresa8x2 {
+    width: 200px;
+  }
+  .fresa9-container {
+    top: 159%;
+  }
+  .fresa9 {
+    width: 200px;
+  }
+}
