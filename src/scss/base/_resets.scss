@@ -813,6 +813,14 @@ button {
     padding-left: 20px;
   }
 }
+@media (min-height: 900px) {
+  .arrow-container-up {
+    bottom: -160%;
+  }
+  .arrow-right {
+    border-left: 412px solid white;
+  }
+}
 @media (min-width: 1200px) {
   .product-container {
     width: 100%;
